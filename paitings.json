@@ -1,0 +1,53 @@
+{
+    "paitings" : [
+        {
+            "id": "1",
+            "title": "Sober Joe sheet",
+            "artist": "Gnomes",
+            "price": "$19.99",
+            "url": "./images/1.jpg"
+        },
+        {
+            "id": "2",
+            "title": "Lady Face",
+            "artist": "TAA",
+            "price": "$25.99",
+            "url": "./images/2.jpg"
+        },
+        {
+            "id": "3",
+            "title": "Margaritta Girl",
+            "artist": "Jerry",
+            "price": "$15.99",
+            "url": "./images/3.jpg"
+        },
+        {
+            "id": "4",
+            "title": "Skull Dagger",
+            "artist": "Gnomes",
+            "price": "$10.99",
+            "url": "./images/4.jpg"
+        },
+        {
+            "id": "5",
+            "title": "Color Lady Head",
+            "artist": "jack",
+            "price": "$23.99",
+            "url": "./images/5.jpg"
+        },
+        {
+            "id": "6",
+            "title": "Trad Parrot",
+            "artist": "Gnomes",
+            "price": "$5.99",
+            "url": "./images/6.jpg"
+        },
+        {
+            "id": "7",
+            "title": "Trust No One",
+            "artist": "Joe",
+            "price": "$13.99",
+            "url": "./images/7.jpg"
+        }
+    ]
+}

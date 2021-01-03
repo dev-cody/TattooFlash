@@ -1,0 +1,259 @@
+
+/* Import Roboto font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+nav img {
+    height: 75px;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+footer {
+    height: 8vh;
+    background-color: #251714;
+}
+/* Class styles */
+
+.about {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 5%;
+    margin: 5%;
+    height: 100vh;
+}
+
+.about h1 {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.about h4 {
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.about img {
+    width: 250px;
+}
+
+.about-paragraph {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+.about-paragraph p {
+    padding: 3%;
+    font-size: 1.3rem;
+    line-height: 35px;
+}
+
+.button-group {
+    width: 75%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.btn {
+    outline: none;
+    border: none;
+    height: 35px;
+    width: 100px;
+    border-radius: 15px;
+    text-decoration: none;
+    background-color: #B90A21;
+    color: #ffffff;
+    margin: 3%;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.btn.lrg {
+    height: 55px;
+    width: 150px;
+    font-size: 1.5rem;
+    border-radius: 20px;
+}
+
+.hero-section {
+    height: 92vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #EECCB0;
+    color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url("./images/background.JPG");
+}
+
+.hero-section h1 {
+    font-size: 2rem;
+    text-align: center;
+    padding: 1%;
+}
+
+.market {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5%;
+}
+
+.market h1 {
+    font-size: 2rem;
+}
+
+.navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #251714;
+    padding: 0 5%;
+}
+ 
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+.navbar-links li a.active {
+    color: #B90A21;
+}
+
+.navbar-links li:hover {
+    background-color: #EECCB0;
+    border-radius: 15px;
+    transition-duration: 1s;
+}
+
+.toggle-button {
+    position: absolute;
+    top: 1.5rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* Store Cards */ 
+
+.paitings-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.card-sale {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.paiting-card {
+    width: 225px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    height: 300px;
+    margin: 5%;
+}
+
+.paiting-card img {
+    width: 200px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        transition: opacity 1s ease-out;
+        opacity: 0;
+        height: 0;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+        opacity: 1;
+        height: auto;
+    }
+}
+
+
+
