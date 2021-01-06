@@ -2,7 +2,19 @@
 /* Import Roboto font */
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+/*
+Green: #6A7356
+Brown: #BFA07A
+Light-Brown: #D9D1C7
+*/
+
 /* General styles */
+
+:root {
+    --green: #6A7356;
+    --brown: #BFA07A;
+    --lightbrown: #D9D1C7;
+}
 * {
     margin: 0;
     padding: 0;
@@ -24,48 +36,18 @@ a {
 
 footer {
     height: 8vh;
-    background-color: #251714;
+    background-color: var(--green);
 }
+
 /* Class styles */
 
 .about {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: column;
-    padding: 0 5%;
-    margin: 5%;
-    height: 100vh;
+
 }
 
 .about h1 {
     text-align: center;
-    font-size: 1.5rem;
 }
-
-.about h4 {
-    font-size: 1.4rem;
-    text-align: center;
-}
-
-.about img {
-    width: 250px;
-}
-
-.about-paragraph {
-    margin-top: 5%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: column;
-}
-
-.about-paragraph p {
-    padding: 3%;
-    font-size: 1.3rem;
-    line-height: 35px;
-}
-
 .button-group {
     width: 75%;
     display: flex;
@@ -80,7 +62,7 @@ footer {
     width: 100px;
     border-radius: 15px;
     text-decoration: none;
-    background-color: #B90A21;
+    background-color: var(--brown);
     color: #ffffff;
     margin: 3%;
     cursor: pointer;
@@ -100,7 +82,6 @@ footer {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: #EECCB0;
     color: white;
     background-position: center;
     background-repeat: no-repeat;
@@ -131,7 +112,7 @@ footer {
     position: relative;
     justify-content: space-between;
     align-items: center;
-    background-color: #251714;
+    background-color: var(--green);
     padding: 0 5%;
 }
  
@@ -158,11 +139,11 @@ footer {
 }
 
 .navbar-links li a.active {
-    color: #B90A21;
+    color: var(--lightbrown);
 }
 
 .navbar-links li:hover {
-    background-color: #EECCB0;
+    background-color: var(--brown);
     border-radius: 15px;
     transition-duration: 1s;
 }
@@ -218,6 +199,31 @@ footer {
 }
 
 @media (min-width: 769px) {
+
+    .about {
+        margin: 0 auto;
+        height: 65vh;
+        padding-top: 5%;
+    }
+
+    .about h1 {
+        font-size: 2rem;
+        letter-spacing: 5px;
+        line-height: 4rem;
+        text-align: center;
+    }
+
+    .about img {
+        width: 50%;
+    }
+
+    .about-paragraph {
+        flex-direction: row;
+    }
+
+    .about-paragraph p {
+        font-size: 1rem;
+    }
 
     .hero-section h1 {
         font-size: 3rem;
