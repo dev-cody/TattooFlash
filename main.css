@@ -42,12 +42,15 @@ footer {
 /* Class styles */
 
 .about {
-
-}
-
-.about h1 {
     text-align: center;
 }
+
+.about hr {
+    width: 35px;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+
 .button-group {
     width: 75%;
     display: flex;
@@ -164,6 +167,15 @@ footer {
     width: 100%;
     background-color: white;
     border-radius: 10px;
+}
+
+.triangle {
+    margin: 0 auto;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid var(--green);
 }
 
 /* Store Cards */ 
