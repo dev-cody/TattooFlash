@@ -30,11 +30,11 @@ class UI {
         <div class="paiting-card" key=${paiting.id}>
           <img src=${paiting.url} alt=${paiting.title}>
           <div class="card-body">
-              <h3>${paiting.title}</h3>
+              <h4>${paiting.title}</h4>
               <p>Artist: ${paiting.artist}</p>
           </div>
           <div class="card-sale">
-              <h3>${paiting.price}</h3></h3>
+              <h5>${paiting.price}</h5>
               <button class="btn">Buy</button>
           </div>
         </div>

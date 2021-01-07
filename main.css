@@ -35,20 +35,36 @@ a {
 }
 
 footer {
-    height: 8vh;
+    height: 10vh;
+    width: 100vw;
     background-color: var(--green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Class styles */
 
 .about {
     text-align: center;
+    padding: 0 5%;
 }
 
 .about hr {
     width: 35px;
     margin: 0 auto;
     border: 1px solid black;
+}
+
+.about h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.about p {
+    font-size: 1rem;
+    letter-spacing: .15rem; 
+    margin-bottom: 3%;
 }
 
 .button-group {
@@ -79,8 +95,25 @@ footer {
     border-radius: 20px;
 }
 
+.circle {
+    background-color: #ffffff;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 2%;
+    transform: rotateZ(360deg) 3s ease;
+}
+
+.circle .fab {
+    color: var(--brown);
+    font-size: 2rem;
+}
+
 .hero-section {
-    height: 92vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -98,7 +131,7 @@ footer {
     padding: 1%;
 }
 
-.market {
+.market, .splits {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -106,7 +139,7 @@ footer {
     margin-top: 5%;
 }
 
-.market h1 {
+.market, .splits h1 {
     font-size: 2rem;
 }
 
@@ -149,6 +182,14 @@ footer {
     background-color: var(--brown);
     border-radius: 15px;
     transition-duration: 1s;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    margin: 0 auto;
 }
 
 .toggle-button {
@@ -205,16 +246,55 @@ footer {
     margin: 5%;
 }
 
+.paiting-card p {
+    font-size: 1rem;
+}
+
 .paiting-card img {
     width: 200px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+/* About section cards */
+
+.about-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 2%;
+    padding: 0 5%;
+}
+
+.about-card {
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.about-card h4 {
+    font-size: 2rem;
+    font-weight: bolder;
+    margin: 2% auto;
+}
+
+.about-card p {
+    font-size: 1.5rem;
+    letter-spacing: .15rem;
+}
+
+.about-card .far, .fas {
+    color: var(--green);
+    font-size: 4rem;
+}
+
+
 @media (min-width: 769px) {
 
     .about {
         margin: 0 auto;
-        height: 65vh;
         padding-top: 5%;
     }
 
