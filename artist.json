@@ -1,7 +1,29 @@
 {
-    "artist": [
+    "artists": [
         {
-            
+            "id": "1",
+            "name": "Cody",
+            "profile": "#"
+        },
+        {
+            "id": "2",
+            "name": "Joe",
+            "profile": "#"
+        },
+        {
+            "id": "3",
+            "name": "Gnomes",
+            "profile": "#"
+        },
+        {
+            "id": "4",
+            "name": "Jerry",
+            "profile": "#"
+        },
+        {
+            "id": "5",
+            "name": "Bill",
+            "profile": "#"
         }
     ]
 }

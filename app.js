@@ -22,6 +22,20 @@ class Paitings{
   }
 }
 
+//Get the painters from the list
+class Artists {
+  async getArtists() {
+    try {
+      let result = await fetch("artist.json");
+      let data = await result.json();
+      let artists = data.artists;
+      return artists;
+    } catch (err) {
+      console.log(err);
+    }
+  }
+}
+
 class UI {
   displayPaitings(paitings) {
     let result = '';
@@ -54,6 +68,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const ui = new UI();
     //Get all of the products
     products.getProducts().then(paitings => ui.displayPaitings(paitings));
+  } else if (window.location.pathname === '/splits.html') {
+    const artists = new Artists();
+    //Get all of the artists
+    artists.getArtists().then(artists => {
+      console.log(artists);
+    });
   }
 
 });
