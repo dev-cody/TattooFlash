@@ -3,7 +3,10 @@ const toggleButton = document.querySelector('.toggle-button');
 const navbarLinks = document.querySelector('.navbar-links');
 //Market place DIV
 const market = document.querySelector('.paitings-container');
+//Artist splits page
+const splitsPage = document.querySelector('.splits-artists');
 
+//toggle navbar
 toggleButton.addEventListener('click', () => {
   navbarLinks.classList.toggle('active')
 });
@@ -56,6 +59,24 @@ class UI {
     });
     market.innerHTML = result;
   }
+
+  displayArtist(artists) {
+    let result = '';
+    artists.forEach( artist => {
+      result += `
+        <div class="artist-card" key="${artist.id}>
+          <div class="artist-card-body">
+            <h4>${artist.name}</h4>
+            <a href=${artist.profile}>
+              <button class="btn">Split!</button>
+            </a>
+          </div>
+        </div>
+      `
+    });
+    splitsPage.innerHTML = result;
+  }
+
 }
 
 class Storage {}
@@ -70,9 +91,30 @@ document.addEventListener("DOMContentLoaded", () => {
     products.getProducts().then(paitings => ui.displayPaitings(paitings));
   } else if (window.location.pathname === '/splits.html') {
     const artists = new Artists();
+    const ui = new UI();
     //Get all of the artists
-    artists.getArtists().then(artists => {
-      console.log(artists);
+    artists.getArtists().then(artists => ui.displayArtist(artists));
+  } else if (window.location.pathname === '/signup.html') {
+
+    //signup and registration toggle
+    const createAccount = document.querySelector('#createAccount');
+    const loginAlready = document.querySelector('#linkLogin');
+    
+    //toggle account creation and signup
+    createAccount.addEventListener('click', () => {
+      const loginForm = document.querySelector('#login');
+      const createForm = document.querySelector('#createAccountForm');
+
+      loginForm.classList.add("form-hidden");
+      createForm.classList.remove("form-hidden");
+    });
+
+    loginAlready.addEventListener('click', () => {
+      const loginForm = document.querySelector('#login');
+      const createForm = document.querySelector('#createAccountForm');
+
+      createForm.classList.add("form-hidden");
+      loginForm.classList.remove("form-hidden");
     });
   }
 
